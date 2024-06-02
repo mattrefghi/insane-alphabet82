@@ -1,0 +1,336 @@
+:0->A:0->B
+:0->C:0->D
+:0->E:0->F
+:0->G:0->H
+:0->I:0->J
+:0->M:0->N
+:0->O:0->P
+:0->Q:0->R
+:0->S:0->T
+:0->U:0->V
+:0->W:0->Z
+:0->L
+:4->X
+:8->Y
+:2->A
+:1->B
+:ClrHome
+:Disp "INSANE ALPHABET","---------------","BETA VER:    1.0","   JUNE 19,2003","BY:MATT R.","","MATTREFGHI.COM"
+:Pause 
+:ClrHome
+:Disp "CONTROLS:","ARROW KEYS=MOVE","MODE=PAUSE","----------------","SURVIVE AS LONG","AS YOU CAN!"
+:Pause 
+:ClrHome
+:Output(X,Y,"+"
+:Lbl K
+:getKey->K
+:If L=0
+:Output(8,1,"LEVEL 1"
+:L+1->L
+:
+:If K=22:Then
+:Output(8,12,L:Pause 
+:Output(8,12,"    "
+:End
+:If K=24:Then
+:Output(X,Y," "
+:Y-1->Y
+:Output(X,Y,"+"
+:Else
+:If K=25:Then:
+:Output(X,Y," "
+:X-1->X
+:Output(X,Y,"+"
+:Else
+:If K=26:Then
+:Output(X,Y," "
+:Y+1->Y
+:Output(X,Y,"+"
+:Else
+:If K=34:Then
+:Output(X,Y," "
+:X+1->X
+:Output(X,Y,"+"
+:End
+:End
+:End
+:End
+:
+:
+:If X<2:Then
+:Output(X,Y," "
+:X+1->X
+:Output(X,Y,"+"
+:Else
+:If X>7:Then
+:Output(X,Y," "
+:X-1->X
+:Output(X,Y,"+"
+:End
+:End
+:
+:If Y<2:Then
+:Output(X,Y," "
+:Y+1->Y
+:Output(X,Y,"+"
+:Else
+:If Y>15:Then
+:Output(X,Y," "
+:Y-1->Y
+:Output(X,Y,"+"
+:End
+:End
+:
+:Output(A,B," "
+:
+:If B<=14:Then
+:B+1->B
+:End
+:
+:Fix 0
+:
+:If B=15:Then
+:1->B
+:Lbl 1
+:int (rand*8)->A
+:If A<=1 or A>7
+:Goto 1
+:End
+:
+:Output(A,B,"A"
+:If L>=10:Then
+:If L=10:Then
+:Output(8,1,"LEVEL 2         "
+:2->C
+:15->D
+:End
+:Output(C,D," "
+:If D>=1
+:Then
+:D-1->D
+:End
+:If D=2:Then
+:15->D
+:Lbl 2
+:int (rand*8)->C
+:If C<=1 or C>7
+:Goto 2
+:End
+:Output(C,D,"B"
+:End
+:
+:If L>=20:Then
+:If L=20:Then
+:Output(8,1,"LEVEL 3"
+:4->E
+:2->F
+:End
+:Output(E,F," "
+:If F<=14:Then
+:F+1->F
+:End
+:Fix 0
+:If F=15:Then
+:1->F
+:Lbl 3
+:int (rand*6)->E
+:If E<=1 or E>7
+:Goto 3
+:End
+:
+:Output(E,F,"C"
+:End
+:
+:If L>=30:Then
+:If L=30:Then
+:Output(8,1,"LEVEL 4"
+:5->G
+:15->H
+:End
+:Output(G,H," "
+:
+:If H<=15:Then
+:H-1->H
+:End
+:Fix 0
+:If H=1:Then
+:15->H
+:Lbl 4
+:int (rand*6)->G
+:If G<=1 or G>7
+:Goto 4
+:End
+:
+:Output(G,H,"D"
+:End
+:
+:If L>=40:Then
+:If L=40:Then
+:Output(8,1,"LEVEL 5"
+:6->I
+:1->J
+:End
+:Output(I,J," "
+:
+:If J<=14:Then
+:J+1->J
+:End
+:Fix 0
+:If J=15:Then
+:1->J
+:Lbl 5
+:int (rand*6)->I
+:If I<=1 or I>7
+:Goto 5
+:End
+:
+:Output(I,J,"E"
+:End
+:
+:If L>=50:Then
+:If L=50:Then
+:Output(8,1,"LEVEL 6"
+:3->M
+:1->N
+:End
+:Output(M,N," "
+:If N<=14:Then
+:N+1->N
+:End
+:Fix 0
+:If N=15:Then
+:1->N
+:Lbl 6
+:int (rand*6)->M
+:If M<=1 or M>7
+:Goto 6
+:End
+:Output(M,N,"F"
+:End
+:
+:If L>=60:Then
+:If L=60:Then
+:Output(8,1,"LEVEL 7
+:5->O
+:15->P
+:End
+:Output(O,P," "
+:If P>=1:Then
+:P-1->P
+:End
+:Fix 0
+:If P=2:Then
+:15->P
+:Lbl 7
+:int (rand*6)->O
+:If O<=1 or O>7
+:Goto 7
+:End
+:
+:Output(O,P,"G"
+:End
+:
+:If L>=70:Then
+:If L=70:Then:
+:Output(8,1,"LEVEL 8"
+:2->Q
+:8->R
+:End
+:Output(Q,R," "
+:If Q>=2:Then
+:Q+1->Q
+:End
+:Fix 0
+:If Q>=8:Then
+:2->Q
+:Lbl 8
+:int (rand*14)->R
+:If R<=1 or R>=16
+:Goto 8
+:End
+:
+:Output(Q,R,"H"
+:End
+:
+:If L>=80:Then
+:If L=80:Then
+:Output(8,1,"LEVEL 9"
+:2->S
+:4->T
+:End
+:Output(S,T," "
+:If S>=2:Then
+:S+1->S
+:End
+:
+:Fix 0
+:If S>=8:Then
+:2->S
+:Lbl 9
+:int (rand*14)->T
+:If T<=1 or T>=16
+:Goto 9
+:End
+:
+:Output(S,T,"I"
+:End
+:
+:If L>=90:Then
+:If L=90:Then
+:Output(8,1,"LEVEL 10"
+:2->U
+:2->V
+:End
+:Output(U,V," "
+:If U>=2:Then
+:U+1->U
+:End
+:
+:Fix 0
+:If U>=8:Then
+:2->U
+:Lbl A
+:int (rand*14)->V
+:If V<=1 or V>=16
+:Goto A
+:End
+:
+:Output(U,V,"J"
+:End
+:
+:If L>=100:Then
+:If L=100:Then
+:Output(8,1,"LEVEL X "
+:2->W
+:7->Z
+:End
+:Output(W,Z," "
+:If W>=2:Then
+:W+1->W
+:End
+:
+:Fix 0
+:If W>=8:Then
+:2->W
+:Lbl B
+:int (rand*14)->Z
+:If Z<=1 or Z>=16
+:Goto B
+:End
+:
+:Output(W,Z,"K"
+:End
+:
+:
+:Output(X,Y,"+"
+:If (X=A and Y=B) or (X=C and Y=D) or (X=E and Y=F) or (X=G and Y=H) or (X=M and Y=N) or (X=O and Y=P) or (X=Q and Y=R) or (X=S and Y=T) or (X=U and Y=V) or (X=W and Y=Z)
+:Then
+:Output(X,Y,"*"
+:Output(1,1,"YOU DIED"
+:Output(8,1,"SCORE="
+:Output(8,7,L
+:Stop
+:End
+:
+:Goto K
+:
